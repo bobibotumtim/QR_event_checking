@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Check-In System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Upcoming Online Events</h1>
+    </header>
+
+    <div class="events-grid" id="eventsGrid">
+      <!-- Events will be loaded here -->
+    </div>
+  </div>
+
+  <!-- QR Code Modal -->
+  <div class="modal" id="qrModal">
+    <div class="modal-content">
+      <h2>Event Check-In</h2>
+      <div class="event-info" id="modalEventInfo">
+        <h3 id="modalEventName"></h3>
+        <p id="modalEventDate"></p>
+      </div>
+      <div class="qr-code" id="qrCode"></div>
+      <p class="scan-instruction">Scan QR code to register</p>
+      <p class="or-text">or</p>
+      <button class="direct-link-btn" id="directLinkBtn" onclick="openRegistration()">Open Registration Form</button>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
